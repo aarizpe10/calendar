@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calendar xml164</string>
+    <string name="title">Events</string>
+    <string name="sort_by_date">Sort By Date</string>
+    <string name="sort_by_name">Sort By Name</string>
+    <string name="sort_by_category">Sort By Category</string>
+    <string name="details">Details</string>
+</resources>
