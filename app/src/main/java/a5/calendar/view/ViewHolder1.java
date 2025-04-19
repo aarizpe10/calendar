@@ -13,10 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import a5.calendar.R;
 import a5.calendar.model.Event;
 
+/**
+ * Class for setting a singular recyclerView event
+ */
 public class ViewHolder1 extends RecyclerView.ViewHolder {
     TextView eventTextView;
     Button detailsButton;
 
+    /**
+     * Constructor for the ViewHolder1 class
+     * @param inflater
+     * @param parent
+     */
     public ViewHolder1(LayoutInflater inflater, ViewGroup parent) {
         super(inflater.inflate(R.layout.event_item, parent, false));
 
@@ -24,6 +32,11 @@ public class ViewHolder1 extends RecyclerView.ViewHolder {
         detailsButton = itemView.findViewById(R.id.details_button); // ADD THIS to link the button
     }
 
+    /**
+     * Sets the text for the recycler view event and the onClickListener for
+     * the details button
+     * @param event
+     */
     @SuppressLint("SetTextI18n")
     public void bind(Event event) {
         eventTextView.setText(event.getMonth() + "/" + event.getDate() + " " +

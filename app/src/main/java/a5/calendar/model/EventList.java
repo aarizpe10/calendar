@@ -5,9 +5,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * Class that contains methods related to reading the CSV file of events
+ */
 public class EventList {
     public ArrayList<Event> events = new ArrayList<Event>();
 
+    /**
+     * Reads the csv file of events and places them into an Event object and
+     * then into an ArrayList
+     * @param is
+     * @throws Exception
+     */
     public void readEventList(InputStream is) throws Exception{
         BufferedReader br = new BufferedReader (new InputStreamReader(is));
         String line = br.readLine();
@@ -27,6 +36,11 @@ public class EventList {
         br.close();
 
     }
+
+    /**
+     * Gets the ArrayList of Event objects
+     * @return
+     */
     public ArrayList<Event> getEvents(){
         return events;
     }
